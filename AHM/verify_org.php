@@ -1,6 +1,6 @@
 <?php
     include 'common/_dbconnect.php';
-    require 'autoload.php';
+    require 'vendor/autoload.php';
     $approve=$_GET['ap'];
     $API = "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";
     $userid=$_GET['orgid'];
