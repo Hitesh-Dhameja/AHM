@@ -1,6 +1,8 @@
 <?php
     include 'common/_dbconnect.php';
+    require 'autoload.php';
     $approve=$_GET['ap'];
+    $API = "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";
     $userid=$_GET['orgid'];
     echo $approve;
     echo $userid;
@@ -28,10 +30,25 @@
         border-radius:3px;
         margin-left:30%;">Continue</button></a>
         </html>';
-        $headers = "From: meghashahri@gmail.com" . '\r\n'.
-        $headers .= "MIME-Version:1.0" ."\r\n";
-        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-        $send_mail=mail($to, $subject, $message, $headers);
+        $headers = "From: meghashahri@gmail.com";
+        // $headers .= "MIME-Version:1.0" ."\r\n";
+        // $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        $email = new \SendGrid\Mail\Mail();
+        $email->setFrom("2018.hitesh.dhameja@ves.ac.in", "ConnecTTogether");
+        $email->setSubject($subject);
+        $email->addTo($to, "You");
+        $email->addContent("text/html", $message);
+        $sendgrid = new \SendGrid($API);
+        $sendgrid->send($email);
+        // try {
+        //     $response = $sendgrid->send($email);
+        //     print $response->statusCode() . "\n";
+        //     print_r($response->headers());
+        //     print $response->body() . "\n";
+        // } catch (Exception $e) {
+        //     echo 'Caught exception: '. $e->getMessage() ."\n";
+        // }
+        // $send_mail=mail($to, $subject, $message, $headers);
         
     }
     else{
@@ -49,11 +66,18 @@
         <h2>We are very sorry to inform that your organization has not been approved based on the proof provided.<br>
         Sorry you cannot continue to use our system.</h2><br>
         </html>';
-        $headers = "From: meghashahri@gmail.com" . '\r\n'.
-        $headers .= "MIME-Version:1.0" ."\r\n";
-        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        //$headers = "From: meghashahri@gmail.com";
+        // $headers .= "MIME-Version:1.0" ."\r\n";
+        // $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        $email = new \SendGrid\Mail\Mail();
+        $email->setFrom("2018.hitesh.dhameja@ves.ac.in", "ConnecTTogether");
+        $email->setSubject($subject);
+        $email->addTo($to, "You");
+        $email->addContent("text/html", $message);
+        $sendgrid = new \SendGrid($API);
+        $sendgrid->send($email);
         
-        $send_mail=mail($to, $subject, $message, $headers);
+        //$send_mail=mail($to, $subject, $message, $headers);
 
         $sql2="DELETE FROM `users` WHERE `users`.`user_id` = $userid";
         $result2=mysqli_query($conn, $sql2);
@@ -61,6 +85,26 @@
         
     }
     header("location:/adminPanel.php#ad-sect")
+
+
+?>
+<!-- <?php
+// $API = "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";
+// $email = new \SendGrid\Mail\Mail();
+// $email->setFrom("2018.hitesh.dhameja@ves.ac.in", "ConnecTTogether");
+// $email->setSubject("Sending with Twilio SendGrid is Fun");
+// $email->addTo("$row1['email']", "You");
+// // $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+// $email->addContent("text/html", $message);
+// $sendgrid = new \SendGrid($API);
+// try {
+//     $response = $sendgrid->send($email);
+//     print $response->statusCode() . "\n";
+//     print_r($response->headers());
+//     print $response->body() . "\n";
+// } catch (Exception $e) {
+//     echo 'Caught exception: '. $e->getMessage() ."\n";
+//} -->
 
 
 ?>
