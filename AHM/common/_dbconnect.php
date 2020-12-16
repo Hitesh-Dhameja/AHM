@@ -1,7 +1,7 @@
 <?php
     //connecting to db
     //$servername = "localhost:3307";
-    $servername = " sql12.freemysqlhosting.net";
+    $servername = "sql12.freemysqlhosting.net";
     $username = "sql12382461";
     $password = "nHadcdCfzd";
     $database = "sql12382461";
