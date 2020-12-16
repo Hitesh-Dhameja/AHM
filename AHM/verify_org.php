@@ -17,7 +17,7 @@
         $message = '
         <html>
         <h2>Congratulations your Organization is verified and approved.Please login to continue further process.<br>Thankyou!</h2><br>
-        <a href="/AHM/login.php"><button style="border: 1px solid #0275d8;
+        <a href="/login.php"><button style="border: 1px solid #0275d8;
         background: #0275d8;
         color: white;
         text-align: center;
@@ -60,7 +60,7 @@
         
         
     }
-    header("location:/AHM/adminPanel.php#ad-sect")
+    header("location:/adminPanel.php#ad-sect")
 
 
 ?>

@@ -17,10 +17,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     || empty($age)|| empty($need)|| empty($domain))
   {
     
-    header("location:/AHM/individual_signup.php?status=empty");
+    header("location:/individual_signup.php?status=empty");
  }
     else if($password != $cpassword){
-        header("location:/AHM/individual_signup.php?status=password");
+        header("location:/individual_signup.php?status=password");
         
     }
     else{
@@ -69,14 +69,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $sql4 = "INSERT INTO ind_interest (ind_id,interest) VALUES ($ind_id,'$selectedOption')";
         $result3 = mysqli_query($conn,$sql4);
     }
-    header("location:/AHM/login.php");
+    header("location:/login.php");
 }
 
     elseif(verifyEmail::validate($email)){ 
             
-        header("location:/AHM/individual_signup.php?status=email");
+        header("location:/individual_signup.php?status=email");
     }else{ 
-        header("location:/AHM/individual_signup.php?status=email");
+        header("location:/individual_signup.php?status=email");
     } 
     
 

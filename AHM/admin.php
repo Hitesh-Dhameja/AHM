@@ -1,3 +1,3 @@
 <?php
-header("location:/AHM/adminLogin.php?error=false");
+header("location:/adminLogin.php?error=false");
 ?>

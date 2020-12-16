@@ -21,11 +21,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     //proof ka empty check nahi kiya h
 
     if(empty($name) || empty($email) || empty($password) || empty($cpassword) || empty($phone) || empty($location)){
-        header("location:/AHM/org_signUp.php?status=empty");
+        header("location:/org_signUp.php?status=empty");
     }
     else{
         if($password != $cpassword){
-            header("location:/AHM/org_signUp.php?status=password");
+            header("location:/org_signUp.php?status=password");
         }
         else{
             require_once 'VerifyEmail.class.php'; 
@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                         // $encoded_image = 'data:image/jpeg;base64,' . $encoded_image;
                         $sql = "UPDATE org_users set proof='$imgContent' where Org_uid=$current_user_id ";
                         $resullt = mysqli_query($conn,$sql);
-                        header("location:/AHM/message.php?verify=process");
+                        header("location:/message.php?verify=process");
                     }
         
                 }
@@ -81,10 +81,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             else{
                 if(verifyEmail::validate($email)){ 
             
-                    header("location:/AHM/org_signUp.php?status=email");
+                    header("location:/org_signUp.php?status=email");
                  }
                 else{ 
-                    header("location:/AHM/org_signUp.php?status=email");
+                    header("location:/org_signUp.php?status=email");
                 } 
             }
     

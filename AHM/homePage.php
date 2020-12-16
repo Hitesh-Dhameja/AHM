@@ -3,7 +3,7 @@
         session_start(); 
     }
     if(empty($_SESSION["username"])){
-        header("location:/AHM/login.php");
+        header("location:/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -96,7 +96,7 @@
             
         ?>
         <hr>
-        <a href="/AHM/myprofile.php">View Profile</a>
+        <a href="/myprofile.php">View Profile</a>
     </div>
 
     <div class="leftBottom">
@@ -133,7 +133,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?onlyContent=true" method="POST">
+                <form action="/addPost.php?onlyContent=true" method="POST">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>
@@ -158,7 +158,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?imageContent=true" method="POST" enctype="multipart/form-data">
+                <form action="/addPost.php?imageContent=true" method="POST" enctype="multipart/form-data">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>
@@ -185,7 +185,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?videoContent=true" method="POST" enctype="multipart/form-data">
+                <form action="/addPost.php?videoContent=true" method="POST" enctype="multipart/form-data">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>

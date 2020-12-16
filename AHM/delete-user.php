@@ -11,6 +11,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $result = mysqli_query($conn,$sql);
     
 }
-header("location:/AHM/admin.php");
+header("location:/admin.php");
 
 ?>

@@ -6,7 +6,7 @@
 
 <?php
     if(!isset($_SESSION["logged_in_email"])){ 
-        header("location:/AHM/adminLogin.php?error=login");
+        header("location:/adminLogin.php?error=login");
        
     }?>
 

@@ -10,11 +10,11 @@
       $result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_assoc($result);
       if($row !=null){
-        header("location:/AHM/adminPanel.php");
+        header("location:/adminPanel.php");
       }
       else {
         echo "Not a valid user or password or username does not match";
-        header("location:/AHM/adminLogin.php?error=true");
+        header("location:/adminLogin.php?error=true");
      }
     
     

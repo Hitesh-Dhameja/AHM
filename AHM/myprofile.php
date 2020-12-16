@@ -3,7 +3,7 @@
         session_start(); 
     }
     if(empty($_SESSION["username"])){
-        header("location:/AHM/login.php");
+        header("location:/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@
                             <div class="part">
                                 <h5>'.$row4['name'].'</h5>
                                 <p style="margin-left:-1px;margin-top:-20px">'.$row4['type'].'</p>
-                                <form method="post" action="/AHM/viewProfile.php?forName='.$id.'">
+                                <form method="post" action="/viewProfile.php?forName='.$id.'">
                                     <button type="submit">View Profile</button>
                                 </form>
                             </div>
@@ -128,7 +128,7 @@
             ?>
         </div>
     </div>
-    <div id="edit-div"><a href="/AHM/editmyprofile.php"><button class="edit-btn">Edit</button></a></div>
+    <div id="edit-div"><a href="/editmyprofile.php"><button class="edit-btn">Edit</button></a></div>
     
     <div class="user">
         <image src=images/user.png height="170px">
@@ -172,7 +172,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?onlyContent=true" method="POST">
+                <form action="/addPost.php?onlyContent=true" method="POST">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>
@@ -196,7 +196,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?imageContent=true" method="POST" enctype="multipart/form-data">
+                <form action="/addPost.php?imageContent=true" method="POST" enctype="multipart/form-data">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>
@@ -223,7 +223,7 @@
                 <h2>Create a post</h2>
             </div>
             <div class="modal-body">
-                <form action="/AHM/addPost.php?videoContent=true" method="POST" enctype="multipart/form-data">
+                <form action="/addPost.php?videoContent=true" method="POST" enctype="multipart/form-data">
                     <div class="nameFrame">
                         <img src="images/user.png">
                         <h5><?php echo $_SESSION["username"];?></h5>

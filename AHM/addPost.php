@@ -13,7 +13,7 @@
             $id = $row['user_id'];
             $sql1 = "INSERT INTO `posts` (`post_id`, `user_id`, `image_posted`, `video_posted`, `article`, `likes_count`, `comments_count`) VALUES (NULL, '$id', NULL, NULL, '$postContent', '0', '0')";
             $result1 = mysqli_query($conn,$sql1);
-            header("location:/AHM/homePage.php?success=true");
+            header("location:/homePage.php?success=true");
         }
         else{
             if(isset($_GET['imageContent'])){
@@ -32,7 +32,7 @@
                 $id = $row['user_id'];
                 $sql1 = "INSERT INTO `posts` (`post_id`, `user_id`, `image_posted`, `imgExt`, `video_posted`, `videoExt`, `article`, `likes_count`, `comments_count`) VALUES (NULL, '$id','$img_path', '$fileType', NULL, NULL, '$postContent', '0', '0')"; 
                 $result1 = mysqli_query($conn,$sql1);
-                header("location:/AHM/homePage.php?success=true");
+                header("location:/homePage.php?success=true");
             }
             else{
                 if(isset($_GET['videoContent'])){
@@ -51,7 +51,7 @@
                     $id = $row['user_id'];
                     $sql1 = "INSERT INTO `posts` (`post_id`, `user_id`, `image_posted`, `imgExt`, `video_posted`, `videoExt`, `article`, `likes_count`, `comments_count`) VALUES (NULL, '$id',NULL, NULL,'$video_path', '$fileType', '$postContent', '0', '0')"; 
                     $result1 = mysqli_query($conn,$sql1);
-                    header("location:/AHM/homePage.php?success=true");
+                    header("location:/homePage.php?success=true");
                 }
             }
         }

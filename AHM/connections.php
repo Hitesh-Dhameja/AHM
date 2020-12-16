@@ -3,7 +3,7 @@
         session_start(); 
     }
     if(empty($_SESSION["username"])){
-        header("location:/AHM/login.php");
+        header("location:/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -93,7 +93,7 @@
             
         ?>
         <hr>
-        <a href="/AHM/myprofile.php">View Profile</a>
+        <a href="/myprofile.php">View Profile</a>
     </div>
 
     <div class="leftBottom">
@@ -157,7 +157,7 @@
                             <div class="part">
                                 <h5>'.$row2['name'].'</h5>
                                 <p>'.$row7['intro'].'</p>
-                                <form method="POST" action="/AHM/updateRequest.php">
+                                <form method="POST" action="/updateRequest.php">
                                     <input type="text" value="'.$otherid.'" name="done" style="display:none">
                                     <input type="submit" name="accept" value="Accept">
                                     <input type="submit" name="reject" value="Reject"> 
@@ -174,7 +174,7 @@
                             <div class="part">
                                 <h5>'.$row2['name'].'</h5>
                                 <p>'.$row7['intro'].'</p>
-                                <form method="POST" action="/AHM/updateRequest.php">
+                                <form method="POST" action="/updateRequest.php">
                                     <input type="text" value="'.$otherid.'" name="done" style="display:none">
                                     <input type="submit" name="accept" value="Accept">
                                     <input type="submit" name="reject" value="Reject"> 
@@ -241,7 +241,7 @@
                             <div class="part">
                                 <h5>'.$row['name'].'</h5>
                                 <p>'.$row['type'].'</p>
-                                <form method="post" action="/AHM/viewProfile.php?forName='.$id.'">
+                                <form method="post" action="/viewProfile.php?forName='.$id.'">
                                     <input type="submit" value="View Profile">
                                 </form>
                                 <form method="get" class="connect">

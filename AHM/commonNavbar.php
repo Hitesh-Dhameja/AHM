@@ -1,20 +1,20 @@
 <nav class="homeNav">
     <img src="images/logo.png">
     <h3>ConnecTTogether</h3>
-    <form method="POST" action="/AHM/searchResults.php">
+    <form method="POST" action="/searchResults.php">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
     </form>
     <ul id="top">
         <li class="decide"><i class="fa fa-home fa-lg" aria-hidden="true" style="color:white"></i><a
-                href="/AHM/homePage.php" id="this1" class="nav1">Home</a></li>
+                href="/homePage.php" id="this1" class="nav1">Home</a></li>
         <li class="decide"><i class="fa fa-users fa-lg" aria-hidden="true" style="color:white"></i><a
-                href="/AHM/connections.php" id="this2" class="nav1">Connections</a></li>
+                href="/connections.php" id="this2" class="nav1">Connections</a></li>
         <li class="decide"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true" style="color:white"></i><a
-                href="/AHM/recommendation.php" id="this3" class="nav1">Recommendations</a>
+                href="/recommendation.php" id="this3" class="nav1">Recommendations</a>
         </li>
         <li class="decide"><i class="fa fa-bell fa-lg" aria-hidden="true" style="color:white"></i><a
-                href="/AHM/notification.php" id="this4" class="nav1">Notifications</a></li>
+                href="/notification.php" id="this4" class="nav1">Notifications</a></li>
         <li id="thisOnee"><img src="images/user.png"><a href="#" class="nav1" onclick="openNav()">Me</a></li>
     </ul>
     <div class="dropdown">
@@ -36,10 +36,10 @@
         <h3>ConnecTTogether</h3>
     </div>
     <a href="myprofile.php"><i class="fa fa-eye fa-lg" aria-hidden="true"></i>View Profile</a>
-    <a href="/AHM/homePage.php"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a>
-    <a href="/AHM/connections.php"><i class="fa fa-users fa-lg" aria-hidden="true"></i>Connections</a>
-    <a href="/AHM/recommendation.php"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>Recommendations</a>
-    <a href="/AHM/notification.php"><i class="fa fa-bell fa-lg" aria-hidden="true"></i>Notifications</a>
+    <a href="/homePage.php"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Home</a>
+    <a href="/connections.php"><i class="fa fa-users fa-lg" aria-hidden="true"></i>Connections</a>
+    <a href="/recommendation.php"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>Recommendations</a>
+    <a href="/notification.php"><i class="fa fa-bell fa-lg" aria-hidden="true"></i>Notifications</a>
     <a href="contact.php"><i class="fa fa-university fa-lg" aria-hidden="true"></i>Complaint</a>
     <a href="contact.php"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i>Contact/queries</a>
     <a href="logout.php"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Logout</a>

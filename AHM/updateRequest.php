@@ -17,4 +17,4 @@ if(isset($_POST['reject'])){
     $sql2 = "DELETE FROM `connections` WHERE `connections`.`userid` = $othersId AND `connections`.`connection_id` = $currentLoggedId";
     $result2 = mysqli_query($conn,$sql2);
 }
-header("location:/AHM/connections.php");
+header("location:/connections.php");

@@ -20,5 +20,5 @@ $sql1="SELECT * FROM domains_available ORDER BY sno DESC LIMIT 1";
         $result4 = mysqli_query($conn,$sql4);
         
 }
-header("location:/AHM/admin.php");
+header("location:/admin.php");
  ?>       

@@ -2,7 +2,7 @@
     session_start();
     include 'common/_dbconnect.php';
     if(!isset($_SESSION["logged_in_email"])){ 
-        header("location:/AHM/adminLogin.php?error=login");
+        header("location:/adminLogin.php?error=login");
        
     }
     echo 'ekkknterr';
@@ -28,10 +28,10 @@
         $result3 = mysqli_query($conn, $sql3);
 
         if(mysqli_affected_rows($conn)>0 ){
-         header("location:/AHM/complaint.php?status=success");
+         header("location:/complaint.php?status=success");
     }
         else{
-            header("location:/AHM/complaint.php?status=fail");
+            header("location:/complaint.php?status=fail");
 
         }
     }

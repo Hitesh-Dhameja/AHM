@@ -21,7 +21,7 @@
             <li><img src="images/logo.png" width="90px"></li>
             <li><a href="index.html">ConnecTTogether</a></li>
             
-            <li><a class="nav1" href="/AHM/">Back</a></li>
+            <li><a class="nav1" href="/">Back</a></li>
 
             <div class="menuIcon" onclick="display()">
                 <div class="bar1"></div>

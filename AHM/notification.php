@@ -3,7 +3,7 @@
         session_start(); 
     }
     if(empty($_SESSION["username"])){
-        header("location:/AHM/login.php");
+        header("location:/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -94,7 +94,7 @@
             
         ?>
         <hr>
-        <a href="/AHM/myprofile.php">View Profile</a>
+        <a href="/myprofile.php">View Profile</a>
     </div>
 
     <div class="leftBottom">

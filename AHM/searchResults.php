@@ -93,7 +93,7 @@
             
         ?>
         <hr>
-        <a href="/AHM/myprofile.php">View Profile</a>
+        <a href="/myprofile.php">View Profile</a>
     </div>
 
     <div class="leftBottom">
@@ -146,7 +146,7 @@
                     <div class="part">
                         <h5>'.$row['name'].'</h5>
                         <p>'.$row['type'].'<p>
-                        <form method="post" action="/AHM/viewProfile.php?forName='.$row['user_id'].'">
+                        <form method="post" action="/viewProfile.php?forName='.$row['user_id'].'">
                                 <input type="submit" value="View Profile">
                         </form>
                     </div>

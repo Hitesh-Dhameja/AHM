@@ -21,12 +21,12 @@
     $send_mail=mail($to, $subject, $query, $headers);
     if($send_mail){
         echo 'if';
-        //header("location:/AHM/contact.php?sent=true");
+        //header("location:/contact.php?sent=true");
         
     }
     else{
         echo 'else';
-        //header("location:/AHM/contact.php?sent=false");
+        //header("location:/contact.php?sent=false");
 
     }
 

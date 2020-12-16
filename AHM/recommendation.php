@@ -3,7 +3,7 @@
         session_start(); 
     }
     if(empty($_SESSION["username"])){
-        header("location:/AHM/login.php");
+        header("location:/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -94,7 +94,7 @@
             
         ?>
         <hr>
-        <a href="/AHM/myprofile.php">View Profile</a>
+        <a href="/myprofile.php">View Profile</a>
     </div>
 
     <div class="leftBottom">
@@ -177,7 +177,7 @@
                                     <div class="part">
                                         <h5>'.$row['name'].'</h5>
                                         <p>'.$row['type'].'</p>
-                                        <form method="post" action="/AHM/viewProfile.php?forName='.$id.'">
+                                        <form method="post" action="/viewProfile.php?forName='.$id.'">
                                             <button type="submit">View Profile</button>
                                         </form>
                                     </div>
@@ -244,7 +244,7 @@
                                     <div class="part">
                                         <h5>'.$row['name'].'</h5>
                                         <p>'.$row['type'].'</p>
-                                        <form method="post" action="/AHM/viewProfile.php?forName='.$id.'">
+                                        <form method="post" action="/viewProfile.php?forName='.$id.'">
                                             <button type="submit">View Profile</button>
                                         </form>
                                     </div>
