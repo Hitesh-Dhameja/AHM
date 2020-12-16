@@ -1,0 +1,511 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+/**********************************************************************************
+                                HomePage
+*********************************************************************************/
+/*                      Navbar         */
+
+.topnav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0e76a8 ;
+}
+
+ul.topnav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right,#0e76a8,#0e76a8);
+    height: 85px;
+}
+ul.topnav li{
+    float: left;
+}
+ul.topnav li:nth-child(3){
+    margin-left: 15px;
+}
+ul.topnav li a {
+    display: block;
+    color: white;
+    margin-top: 35px;
+    margin-right: 35px;
+    text-align: center;
+    text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {
+    border-bottom: 2px solid #fff;
+    transition: .1s all ease-out;
+}
+ul.topnav li:nth-child(2) a:hover:not(.active){
+    border-bottom:none;
+}
+ul.topnav li a.active{
+    border-bottom: 2px solid #fff;
+}
+ul.topnav li.right {
+    float: right;
+}
+ul.topnav li.right a{
+    border: 2px solid #fff;
+    border-radius: 9px;
+    padding: 9px;
+    margin-top: 25px;
+}
+.bottomButton{
+    border: 2px solid #fff;
+    border-radius: 9px;
+    padding: 9px;
+    margin-top: 25px;
+}
+.bottomButton:hover{
+    background-color: #fff;
+    color: #0e76a8;
+}
+ul.topnav li.right a:hover{
+    background-color: #fff;
+    color: #0e76a8;
+}
+.new{
+    margin-top: -5px;
+    margin-bottom: 4px;
+}
+#header i{
+    display:none;
+}
+.headerText{
+    max-width: 400px;
+    margin-top: 150px;
+    margin-left: 20px;
+}
+.mainImage{
+    margin-left: 505px;
+    margin-top: -500px;
+    height: 600px;
+}
+h1{
+    font-size: 34px;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background:#0e76a8;
+    margin: 15px 0;
+}
+.commonBtn {
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #0e76a8;
+    cursor: pointer;
+    font-weight: bold;
+}
+.commonBtn:hover{
+    background-color: #0e76a8;
+    color: #fff;
+}
+p{
+    font-size: 18px;
+    line-height: 18px;
+    color: #777;
+}
+.headerText .commonBtn{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.line{
+    line-height: 8px;
+}
+.line1{
+    width: 15px;
+    height: 15px;
+    background: #0e76a8;
+    display: inline-block;
+}
+.line2{
+    width: 80px;
+    height: 1px;
+    background:#0e76a8;
+    display: inline-block;
+}
+.line3{
+    width: 60px;
+    height: 1px;
+    background: #0e76a8;
+    display: inline-block;
+}
+.smallS{
+    display: none;
+}
+.menuIcon {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 300px;
+  }
+  .menuIcon .bar1{
+    margin-top: -50px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.9s;
+  }
+  
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+    
+/**********************************************************************************
+                                AboutUsPage
+*********************************************************************************/
+#about, #offer{
+    padding: 120px 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    
+}
+#about{
+    background: #ebf8fa;
+}
+.aboutLeftColumn{
+    flex-basis: 50%;
+}
+.aboutLeftColumn img{
+    width: 100%;
+}
+.aboutRightColumn{
+    flex-basis: 50%;
+    text-align: right;
+}
+.aboutText{
+    max-width: 500px;
+    display: inline-block;
+    margin-right: 100px;
+}
+.aboutText h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+}
+.aboutText h3{
+    color: #797979;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/**********************************************************************************
+                                WhyUs?Page
+*********************************************************************************/
+#features{
+    padding-top: 100px;
+    padding-bottom: 90px;
+    overflow-x: hidden;
+}
+.featureHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.featureRow{
+    width: 100%;
+    margin: auto;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.featureColumn{
+    flex-basis: 25%;
+    text-align: center;
+}
+.featureColumn img{
+    width: 350px;
+}
+.featureColumn h4{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400px;
+}
+.featureBtn{
+    margin: 80px auto 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.featureBtn .line{
+    text-align: right;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+
+/**********************************************************************************
+                                ContactUsPage
+*********************************************************************************/
+#contact{
+    background-color: #ebf8fa;
+}
+.contactRow{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.contactLeftColumn, .contactRightColumn{
+    flex-basis: 50%;
+}
+.contactRightColumn img{
+    width: 100%;
+}
+form{
+    max-width: 350px;
+    margin: 30px 0;
+}
+form input{
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 2px solid #0e76a8;
+}
+.btnBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btnBox button{
+    flex-basis: 48%;
+    padding: 18px 0;
+}
+.btnBox button:hover{
+    background-color: #0e76a8;
+    color: #fff;
+}
+.btnBox button i:hover{
+    color: #fff;
+}
+
+/**********************************************************************************
+                                Footer
+*********************************************************************************/
+#footer{
+    padding: 50px 0 30px;
+    margin-top: -52px;
+}
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #fff;
+}
+.footerRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to right,#0e76a8,#0e76a8);
+    padding-bottom: 30px;
+    margin-bottom: -30px;
+}
+.footerLeftColumn{
+    flex-basis: 50%;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.footerRightColumn{
+    flex-basis: 35%;
+}
+.footerLinks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.linkTitle h4{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.linkTitle small{
+    font-size: 13px;
+    color: #000;
+}
+.footerInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.footerLogo{
+    width: 100px;
+    display: inline;
+}
+.footerLogo img{
+    width: 50px;
+    margin-bottom: -17px;
+}
+.footerLogo button{
+    padding: 12px 30px;
+    margin-top: 20px ;
+    font-size: 10px;
+}
+.copyrightText,.footerLogo{
+    flex-basis: 50%;
+    margin-left: -30px;
+}
+.socialIcons{
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.socialIcons i{
+    display: block;
+    width: 20px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+}
+
+
+/**********************************************************************************
+                                Responsive
+*********************************************************************************/
+@media screen and (max-width: 768px){
+    ul.topnav{
+        width:768px;
+    }
+    #header{
+        background-image: none;
+    }
+    
+    .container{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .logo{
+        margin-top: 27px;
+        width: 700px;
+    }
+    .headerText{
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    #menuBtn{
+        width: 40px;
+        right: 50px;
+    }
+    .commonBtn{
+        padding: 10px 16px;
+    }
+    .socialIcons img{
+        width: 20px;
+        margin: 15px auto;
+    }
+    .aboutLeftColumn, .aboutRightColumn{
+        flex-basis: 100%;
+    }
+    .aboutText{
+        display: inline-block;
+        margin: 50px 50px 0;
+    }
+    .aboutText h2{
+        font-size: 18px;
+    }
+    .featureColumn{
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    .courseLeftColumn, .courseRightColumn{
+        flex-basis: 100%;
+        margin-top: 70px;
+    }
+    .contactLeftColumn, .contactRightColumn{
+        flex-basis: 100%;
+    }
+    .contactRightColumn img{
+        margin-top: 50px;
+    }
+    .footerLeftColumn, .footerRightColumn{
+        flex-basis: 100%;
+    }
+    .linkTitle{
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bigs{
+        display: none;
+    }
+    .bar1,.bar2,.bar3{
+        display: block;
+    }
+    .smallS{
+        display: none;
+        margin-top: 85px;
+        text-align: center;
+        background: #0e76a8;
+    }
+    .smallS ul li:nth-child(1){
+        padding-top: 20px;
+    }
+    .smallS ul li{
+        padding-bottom: 25px;
+        
+    }
+    .smallS ul li a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .smallS ul li a.active{
+        border-bottom: 2px solid #fff;
+    }
+    .smallS ul li a:hover:not(.active) {
+        border-bottom: 2px solid #fff;
+        transition: .1s all ease-out;
+    }
+    .headerText{
+        margin-top: 140px;
+        width: 400px;
+    }
+    .headerText img{
+        display: none;
+    }
+    #about{
+        margin-bottom: -20px;
+    }
+    .footerRow{
+        margin-left: 0px;
+        width: 100%;
+        display: block;
+    }
+    .footerRightColumn{
+        margin-left: 45px;
+    }
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+body{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a.active{
+    border-bottom: 2px solid #fff;
+}
+.homeNav{
+    background: #0e76a8;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin-top: -6px;
+    font-family: 'Bree Serif', serif;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.homeNav img{
+    width: clamp(60px, 6vw, 90px);
+    height: 60px;
+}
+.homeNav h3{
+    color: honeydew;
+    margin-right: 15px;
+}
+.homeNav form{
+    padding-top: 13px; 
+    display: flex;
+    margin-right: -25px;
+}
+.homeNav form input[type=text]{
+    border: 1px solid #000000;
+    border-right: none;
+    height: 35px;
+    width: 350px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.homeNav form button{
+    width: 45px;
+    height: 41px;
+    margin-left: -8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f3f3f3;
+    margin-top: -1px;
+    border-left: none;
+    cursor: pointer;
+    outline: none;
+}
+#thisOne a{
+    margin-left: 5px;
+}
+.homeNav ul, .share ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.homeNav ul li a{
+    font-size: 16px;
+}
+.homeNav ul li a:hover:not(.active) {
+    border-bottom: 2px solid #fff;
+    transition: .1s all ease-out;
+}
+.homeNav ul li, .share ul li{
+    list-style: none;
+    padding-left: 30px;
+    
+}
+.homeNav ul li a{
+    color: #fff;
+}
+.homeNav ul li i,.homeNav ul li img{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: -3px;
+}
+.homeNav ul li img{
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-top: -7px;
+    width: clamp(20px, 4vw, 30px);
+    height: clamp(15px, 4vw, 20px);
+}
+.dropbtn {
+    margin-top: 40px;
+    margin-left: -5px;
+    background: #0e76a8;
+    border: none;
+    cursor: pointer;
+}
+.dropdown button{
+    outline: none;
+    border: none; 
+}
+.dropdown {
+    margin-top: -5px;
+    margin-left: -5px;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    margin-left: -80px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.show {
+    display: block;
+}
+.homeNavBottom{
+    display: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
+    a.active{
+        border-bottom: 2px solid #fff;
+    }
+    .homeNav img{
+        width: 7%;
+    }
+    .homeNav h3{
+        margin-top: 16px;
+        font-size: 18px;
+    }
+    .homeNav form{
+        display: flex;
+    }
+    .homeNav form input[type=text]{
+        width: 170px;
+    }
+    .homeNav form button{
+        margin-top: -1px;
+    }
+    .homeNav ul{
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+    .homeNav ul li a{
+        font-size: 1.4vw;
+        margin-right: -4px;
+    }
+    .homeNav ul li img{
+        margin-top: -10px;
+    }
+    .dropdown-content{
+        margin-left: -130px;
+    }
+} 
+@media screen and (max-width: 500px) {
+    .homeNavBottom ul li a{
+        text-decoration: none;
+        color: #000000;
+    }
+    a.active{
+        border-bottom: 2px solid #000;
+    }
+    .homeNav{
+        display: flex;
+        justify-content: space-evenly; 
+    }
+    .homeNav img{
+        width: 11%;
+    } 
+    .homeNav h3{
+        display: none;
+    }
+    .homeNav form input[type=text]{
+        width: 65vw;
+    } 
+    .decide{
+        display: none;
+    }
+    .homeNav ul li img{
+        width: 40px;
+        margin-top: -3px;
+    }
+    .homeNav ul li a{
+        margin-left: 12px;
+        font-size: 14px;
+    }
+    .dropbtn{
+        display: none;
+    }
+    .closebtn{
+        margin-top: 10px;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        margin-top: -48px;
+        z-index: 1;
+        top: 1;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align:left;
+      }
+      .smallMobile{
+          display: flex;
+      }
+      .smallMobile img{
+          width: 18%;
+      }
+      .smallMobile h3{
+          font-size: 30px;
+      }
+      .sidenav a {
+        padding: 8px 8px 25px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #0e76a8;
+        display: block;
+        transition: 0.3s;
+      
+      }
+      .sidenav a i{
+          padding-right: 10px;
+      }
+      
+      .sidenav a:hover{
+        color: #000;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+}
+
