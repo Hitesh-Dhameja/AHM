@@ -28,14 +28,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             header("location:/org_signUp.php?status=password");
         }
         else{
-            require_once 'VerifyEmail.class.php'; 
-            $mail = new VerifyEmail();
-            $mail->setStreamTimeoutWait(20);
-            $mail->Debug= TRUE; 
-            $mail->Debugoutput= 'html'; 
-            $mail->setEmailFrom('2018.megha.shahri@ves.ac.in');
-            if($mail->check($email)){ 
-                echo 'Email &lt;'.$email.'&gt; is exist!'; 
+            // require_once 'VerifyEmail.class.php'; 
+            // $mail = new VerifyEmail();
+            // $mail->setStreamTimeoutWait(20);
+            // $mail->Debug= TRUE; 
+            // $mail->Debugoutput= 'html'; 
+            // $mail->setEmailFrom('2018.megha.shahri@ves.ac.in');
+            // if($mail->check($email)){ 
+            //     echo 'Email &lt;'.$email.'&gt; is exist!'; 
                     
                 $sqll = "INSERT INTO users (name,email,password,phone,location,type) VALUES 
                 ('$name','$email','$password','$phone','$location','Organization')";
@@ -77,17 +77,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         
                 }
 
-            }
-            else{
-                if(verifyEmail::validate($email)){ 
+        }
+            // if{
+            //     if(verifyEmail::validate($email)){ 
             
-                    header("location:/org_signUp.php?status=email");
-                 }
-                else{ 
-                    header("location:/org_signUp.php?status=email");
-                } 
-            }
+            //         header("location:/org_signUp.php?status=email");
+            //      }
+            //     else{ 
+            //         header("location:/org_signUp.php?status=email");
+            //     } 
+            // }
     
-}
     }
+    
 ?>
