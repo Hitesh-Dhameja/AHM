@@ -23,24 +23,24 @@
             $_SESSION["type"] = $row['type'];
 
             if($_SESSION['type'] == 'Organization' and $status==1){
-               header("location:/AHM/org2.php");
+               header("location:/org2.php");
             }
             else if($_SESSION['type'] == 'Organization' and $status==2){
-               header("location:/AHM/homePage.php");
+               header("location:/homePage.php");
             }
             else if($_SESSION['type'] == 'Organization' and $status==0){
-               header("location:/AHM/message.php?verify=decline");
+               header("location:/message.php?verify=decline");
             }
 
             else if($_SESSION['type'] == 'Individual'){
-               header("location:/AHM/homePage.php");
+               header("location:/homePage.php");
             }
             else {
-               header("location:/AHM/login.php?status=fail");
+               header("location:/login.php?status=fail");
             }
          }
          else {
-            header("location:/AHM/login.php?status=fail");
+            header("location:/login.php?status=fail");
          }
       }
    }
