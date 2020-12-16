@@ -25,16 +25,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
     else{
 
-        require_once 'VerifyEmail.class.php'; 
-        $mail = new VerifyEmail();
-        $mail->setStreamTimeoutWait(20);
-        $mail->Debug= TRUE; 
-        $mail->Debugoutput= 'html'; 
-        $mail->setEmailFrom('2018.megha.shahri@ves.ac.in');
+    //     require_once 'VerifyEmail.class.php'; 
+    //     $mail = new VerifyEmail();
+    //     $mail->setStreamTimeoutWait(20);
+    //     $mail->Debug= TRUE; 
+    //     $mail->Debugoutput= 'html'; 
+    //     $mail->setEmailFrom('2018.megha.shahri@ves.ac.in');
     
     
  
-    if($mail->check($email)){ 
+    // if($mail->check($email)){ 
 
     
 
@@ -70,14 +70,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $result3 = mysqli_query($conn,$sql4);
     }
     header("location:/login.php");
-}
 
-    elseif(verifyEmail::validate($email)){ 
+
+    // if(verifyEmail::validate($email)){ 
             
-        header("location:/individual_signup.php?status=email");
-    }else{ 
-        header("location:/individual_signup.php?status=email");
-    } 
+    //     header("location:/individual_signup.php?status=email");
+    // }else{ 
+    //     header("location:/individual_signup.php?status=email");
+    // } 
     
 
     
